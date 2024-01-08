@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Rabbit Message</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #FF6F61, #FF7E5F, #FF8E5E, #FF9D5C, #FFAC5A);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        #rabbit-container {
+            position: relative;
+            width: 200px;
+            height: 300px;
+        }
+
+        #rabbit {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transform-origin: bottom center;
+            animation: walk 2s infinite alternate, blink 1s infinite alternate;
+        }
+
+        #message-board {
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: bounce 1s infinite alternate;
+        }
+
+        h1 {
+            margin: 0;
+            color: #FF4081;
+        }
+
+        @keyframes walk {
+            0% {
+                transform: translateY(0) scaleX(1);
+            }
+            100% {
+                transform: translateY(-50px) scaleX(-1);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(0.7);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="rabbit-container">
+        <div id="message-board">
+            <h1>Baby ATM</h1>
+        </div>
+        <img id="rabbit" src="ok.jpeg" alt="Cute Rabbit">
+    </div>
+</body>
+</html>
